@@ -47,8 +47,10 @@ I will further break down the components of this regex in the sections below:
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+Notice the `/` characters which wrap our regex. This is due to the regex being considered literal.
 
 ### Anchors
+Two characters define the anchors of the regex. These are the `^` and `$` characters. The `^` anchor marks the beginning of the string while the `$` marks the end of the string. You can see each of these anchors functioning within our regex above. Quantifiers are not included in this string, even though they fall between the two anchors.
 
 ### Quantifiers
 
