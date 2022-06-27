@@ -1,6 +1,6 @@
-# Title (replace with your title)
+# Regex Tutorial: Email Matching
 
-Introductory paragraph (replace this with your text)
+This gist is a tutorial writeup on a specific regex, or regular expression, based on matching an email. A regular expression is a sequence of characters that defines a specific search pattern. In code, a regex can be described simply as pattern matching of characters within a string to help validate input.
 
 ## Summary
 
