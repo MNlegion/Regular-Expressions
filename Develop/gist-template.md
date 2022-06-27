@@ -4,7 +4,33 @@ This gist is a tutorial writeup on a specific regex, or regular expression, base
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Within this tutorial I will break down the components which make up the regular expression used to validate an email address. We can best look at regex in code groupings, breaking down each segment of the regex to help us explain its functionality. The following code snippet seen below is the regex in question:  
+
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`  
+
+The first grouping component can be broken down as follows:
+`([a-z0-9_\.-]+)`
+- `a-z`  The string can contain any lowercase letter between a-z.
+- `0-9`  The string can contain any number between 0-9.
+- `_\.-`  The string can contain an underscore, period, or hyphen.
+- `+`  The pattern of the preceding string must be matched one or more times.
+Then the string must include the @ symbol.`@`  
+
+The second grouping component can be broken down as follows:
+`([\da-z\.-]+)`
+- `\d`  The string can include any number 0-9. The \d simply represents a digit 0-9. 
+- `a-z`  The string can include any lowercase letter a-z.
+- `\.-`  The string can include a period or hyphen.
+- `+`  The pattern of the preceding string must be matched one or more times.
+Then the string must include a period.`\.`  
+
+The last grouping component can be broken down as follows:
+`([a-z\.]{2,6})`
+- `a-z`  The string can contain any lowercase letter between a-z.
+- `\.`  The string can include a period.
+- `{2,6}`  The preceding string must be between 2 and 6 characters in length.  
+
+I will further break down the components of this regex in the sections below: 
 
 ## Table of Contents
 
