@@ -68,8 +68,26 @@ Quantifiers are used to specify how many times the pattern is matched. In the ma
 ### Flags
 
 ### Grouping and Capturing
+Grouping uses parentheses (()) to group different components of the string together to check and make sure they are fulfilling the requirements set for them. Below we can see the three different constructs within our email regex below:   
+
+`([a-z0-9_\.-]+)`  
+
+`([\da-z\.-]+)`  
+
+`([a-z\.]{2,6})`
+
+Full regex reference: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ### Bracket Expressions
+Bracket expressions can be used to match allowable characters. Anything inside of the set of square brackets ([]) will represent the chararcters that are being matched. The first of these encountered in this particular regex is `[a-z0-9_\.-]`, which allows lowercase letters a-z, numbers 0-9, `_`, a literal `.` punctuation mark, or a `-`. In the matching email regex, there are three different bracket expressions as you can see broken down individually below:
+
+`[a-z0-9_\.-]`  
+
+`[\da-z\.-]`  
+
+`[a-z\.]`
+
+Full regex reference: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ### Greedy and Lazy Match
 
