@@ -33,18 +33,14 @@ The last grouping component can be broken down as follows:
 I will further break down the components of this regex in the sections below: 
 
 ## Table of Contents
-
+- [Regex Components](#regex-components)
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Character Escapes](#character-escapes)
+- [Author](#author)
 
 ## Regex Components
 Notice the `/` characters which wrap our regex. This is due to the regex being considered literal.
@@ -61,11 +57,12 @@ Quantifiers are used to specify how many times the pattern is matched. In the ma
 
 `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
-### OR Operator
-
 ### Character Classes
+- `[a-z0-9_\.-]`
+- `[\da-z\.-]`
+- `[a-z\.]`
 
-### Flags
+The character classes above are the components which are used in the email regex. These are bracket expressions (see Bracket Expressions below) so the characters or character groups inside the `[]` dictate the allowable characters or character range for that part of the matching pattern. For example, `[a-z0-9_\.-]`, has an allowable range of characters of any lowercase letter, a number between 0 and 9, an `_`, a literal `.` punctuation mark, or a `-`.
 
 ### Grouping and Capturing
 Grouping uses parentheses (()) to group different components of the string together to check and make sure they are fulfilling the requirements set for them. Below we can see the three different constructs within our email regex below:   
@@ -89,13 +86,8 @@ Bracket expressions can be used to match allowable characters. Anything inside o
 
 Full regex reference: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+### Character Escapes
+The email regex tutorial contains two types of character escapes: `\.` and `\d`. `\.` indicates this is a literal `.` instead of the wildcard character class. `\d` matches any of the numbers 0-9 and is simply used to represent a digit. 
 
 ## Author
 
