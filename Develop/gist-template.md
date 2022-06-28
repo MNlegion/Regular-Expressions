@@ -49,10 +49,17 @@ I will further break down the components of this regex in the sections below:
 ## Regex Components
 Notice the `/` characters which wrap our regex. This is due to the regex being considered literal.
 
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+
 ### Anchors
-Two characters define the anchors of the regex. These are the `^` and `$` characters. The `^` anchor marks the beginning of the string while the `$` marks the end of the string. You can see each of these anchors functioning within our regex above. Quantifiers are not included in this string, even though they fall between the two anchors.
+Two characters define the anchors of the regex. These are the `^` and `$` characters. The `^` anchor marks the beginning of the string while the `$` marks the end of the string. You can see each of these anchors functioning within our regex (reference below). Quantifiers are not included in this string, even though they fall between the two anchors.
+
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ### Quantifiers
+Quantifiers are used to specify how many times the pattern is matched. In the matching email regex, there are a few different quantifiers being used. The first that occurs is the plus (+) quantifier. This matches the pattern that precedes it one or more times. Then there is the curly bracket ({}) quantifier that can set limits for a match. The curly bracket quantifier in the matching email regex can be found at the end of the expression as seen below. In our example, {2,6} means that the preceding string is matched a minimun of 2 times and a maximum of 6 times.   
+
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ### OR Operator
 
