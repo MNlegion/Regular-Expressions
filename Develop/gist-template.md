@@ -57,7 +57,7 @@ Two characters define the anchors of the regex. These are the `^` and `$` charac
 `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ### Quantifiers
-Quantifiers are used to specify how many times the pattern is matched. In the matching email regex, there are a few different quantifiers being used. The first that occurs is the plus (+) quantifier. This matches the pattern that precedes it one or more times. Then there is the curly bracket ({}) quantifier that can set limits for a match. The curly bracket quantifier in the matching email regex can be found at the end of the expression as seen below. In our example, {2,6} means that the preceding string is matched a minimun of 2 times and a maximum of 6 times.   
+Quantifiers are used to specify how many times the pattern is matched. In the matching email regex, there are a few different quantifiers being used. The first that occurs is the plus `(+)` quantifier. This matches the pattern that precedes it one or more times. Then there is the curly bracket `({})` quantifier that can set limits for a match. The curly bracket quantifier in the matching email regex can be found at the end of the expression as seen below. In our example, `{2,6}` means that the preceding string is matched a minimun of 2 times and a maximum of 6 times.   
 
 `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
